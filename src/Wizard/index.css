@@ -1,0 +1,55 @@
+.wizard_component {
+  position: relative;
+  width: 900px;
+  height: 600px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+}
+.wizard_component .wizard_slideshow {
+  width: 100%;
+  height: 100%;
+}
+.wizard_component.last_step .wizard_footer .back_link,
+.wizard_component.last_step .wizard_footer .back_link:before,
+.wizard_component.last_step .wizard_footer .next_button:after, .wizard_component.first_step .wizard_footer .back_link,
+.wizard_component.first_step .wizard_footer .back_link:before,
+.wizard_component.first_step .wizard_footer .next_button:after {
+  display: none;
+}
+.wizard_component.hide_wrapping_progress.first_step .wizard_footer, .wizard_component.hide_wrapping_progress.last_step .wizard_footer {
+  justify-content: center;
+}
+.wizard_component.hide_wrapping_progress.first_step .step_progress_bar_component, .wizard_component.hide_wrapping_progress.last_step .step_progress_bar_component {
+  display: none;
+}
+.wizard_component.hide_wrapping_progress.first_step .next_link, .wizard_component.hide_wrapping_progress.last_step .next_link {
+  display: none;
+}
+.wizard_component.hide_wrapping_progress.first_step .next_button, .wizard_component.hide_wrapping_progress.last_step .next_button {
+  display: inline-block;
+}
+.wizard_component .step_progress_bar_component {
+  margin: auto;
+}
+.wizard_component .wizard_footer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 22px 40px;
+  min-height: 88px;
+  background: #b6b6b6;
+  border-top: solid 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.06);
+}
+.wizard_component .wizard_footer .next_link,
+.wizard_component .wizard_footer .back_link {
+  cursor: pointer;
+  user-select: none;
+  color: blue;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 15px;
+}
